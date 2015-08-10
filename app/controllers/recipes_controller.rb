@@ -30,6 +30,28 @@ before_action :find_recipe, only: [:show, :edit, :update, :destroy]
 
   end
 
+def edit
+
+end
+
+def update
+
+  if @recipe.update(recipe_params)
+    redirect_to @recipe
+
+  else
+
+    render 'edit'
+  end
+
+end
+
+def destroy
+
+  @recipe.destroy
+  redirect_to root_path, notice: "Succesfully deleted recipe"
+end
+
   private
 
 def recipe_params
