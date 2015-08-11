@@ -14,6 +14,11 @@
  *= require_self
  */
 
+/*
+
+  @desc => Importing bootstrap into our application. Bootstrap-sass
+
+*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
