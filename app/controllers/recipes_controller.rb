@@ -54,18 +54,18 @@ def destroy
 end
 
 
-  private
+private
 
-#Sets up recipe params and permits the title and description fields.
-def recipe_params
+  #Sets up recipe params and permits the title and description fields.
+  def recipe_params
 
-  params.require(:recipe).permit(:title, :description)
+    params.require(:recipe).permit(:title, :description)
 
-end
-
- #Private method for finding the recipe by the :id Param
-  def find_recipe
-    @recipe = Recipe.find(params[:id])
   end
 
-end
+  #Private method for finding the recipe by the :id Param
+    def find_recipe
+     @recipe = Recipe.find(params[:id])
+    end
+
+  end
